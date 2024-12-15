@@ -2,60 +2,67 @@ import React from 'react';
 import Typography from './ui/Typography';
 
 const Services: React.FC = () => {
+  const services = [
+    "UI/UX Design", "Product Strategy", "Design Systems", "Product Design", 
+    "Brand Identity", "Web & Mobile App Design", "User Research", 
+    "Usability Testing", "Creative Direction", "Web Development"
+  ];
+
+  const industries = [
+    "E-Commerce", "Life Sciences", "Direct 2 Consumer", "Health Tech", 
+    "EdTech", "Health & Wellbeing", "FinTech", "B2B", "Enterprise", 
+    "SaaS", "B2C"
+  ];
+
+  const clients = [
+    "Netflix", "Robin Hood Labs", "Spire Sciences", "b.WEAR", "Priori"
+  ];
+
   return (
-    <section className="">
-        
-      <Typography variant="body" className="mt-4 mx-16 text-gray-600 text-center">
-        At Jaguar Studio, We design with intention, adapting to the evolving digital landscape to
+    <section className="flex flex-col px-[25px] py-[15px] items-center justify-center ">
+      <Typography variant="small" className="mt-4 mx-16 w-[694.79px] text-center items-center text-black leading-5 "> 
+        At Jaguar Studio, we design with intention, adapting to the evolving digital landscape to
         create user-focused solutions that seamlessly integrate creativity and
         functionality, empowering brands to thrive across all platforms.
       </Typography>
-      <Typography variant="h3" className="mt-8 font-semibold">Get in touch with us.</Typography>
+      <Typography variant="h3" className="mt-[17px] font-semibold">Get in touch with us.</Typography>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 text-left">
+      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 mt-[45px] text-left">
         {/* Services */}
         <div>
-          <Typography variant="body" className="font-light">Services</Typography>
-          <ul className="mt-4 space-y-2 text-gray-800 font-semibold">
-            <li>UI/UX Design</li>
-            <li>Design Systems</li>
-            <li>Product Design</li>
-            <li>Brand Identity</li>
-            <li>Web & Mobile App Design</li>
-            <li>User Research</li>
-            <li>Usability Testing</li>
-            <li>Creative Direction</li>
-            <li>Web Development</li>
+          <Typography variant="tiny" className="font-light">Services</Typography>
+          <ul className="mt-[10px] space-y-[-10px] text-gray-800 font-semibold">
+            {services.map(service => (
+              <li key={service}>
+                <Typography variant="small">{service}</Typography>
+              </li>
+            ))}
           </ul>
         </div>
         {/* Industries */}
         <div>
-          <Typography variant="body" className="font-light">Industries</Typography>
-          <ul className="mt-4 space-y-2 text-gray-800 font-semibold">
-            <li>E-Commerce</li>
-            <li>Life Sciences</li>
-            <li>Direct 2 Consumer</li>
-            <li>Health Tech</li>
-            <li>EdTech</li>
-            <li>Health & Wellbeing</li>
-            <li>FinTech</li>
-            <li>B2B</li>
-            <li>Enterprise</li>
-            <li>SaaS</li>
-            <li>B2C</li>
+          <Typography variant="tiny" className="font-light">Industries</Typography>
+          <ul className="mt-[10px] space-y-[-10px] text-gray-800 font-semibold">
+            {industries.map(industry => (
+              <li key={industry}>
+                <Typography variant="small">{industry}</Typography>
+              </li>
+            ))}
           </ul>
         </div>
         {/* Selected Clients */}
         <div>
-          <Typography variant="body" className="font-light">Selected Clients</Typography>
-          <ul className="mt-4 space-y-2 text-gray-800 font-semibold">
-            <li>Netflix</li>
-            <li>Robin Hood Labs</li>
-            <li>Spire Sciences</li>
-            <li>b.WEAR</li>
-            <li>Priori</li>
+          <Typography variant="tiny" className="font-light">Selected Clients</Typography>
+          <ul className="mt-[10px] space-y-[-10px] text-gray-800 font-semibold">
+            {clients.map(client => (
+              <li key={client}>
+                <Typography variant="small">{client}</Typography>
+              </li>
+            ))}
           </ul>
         </div>
+        {/* Empty Column */}
+        <div></div>
       </div>
     </section>
   );

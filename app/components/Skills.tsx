@@ -1,23 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Typography from "./ui/Typography";
+import Image from "next/image";
 
 const Skills: React.FC = () => {
   return (
-    <section className="p-8 e">
-      <Typography variant="h2" className="mb-8 text-36px">
+    <div className="pt-[55px] pl-[49px] leading-48">
+      <Typography variant="h2" className=" text-[64px] italic">
         Skills
       </Typography>
       <div className="flex flex-col lg:flex-row justify-between gap-16">
         {/* Core Specialties */}
-        <div className="flex flex-col">
-          <Typography variant="h3" className="mb-4 text-36px">
+        <div className="flex flex-col mt-[30px]">
+          <Typography variant="body" className="font-bold">
             Core Specialties:
           </Typography>
-          <Typography variant="body" className="mb-6 text-36px">
+          <Typography variant="body1" className="font-bold">
             I do this myself
           </Typography>
-          <ul className="space-y-2">
+          <div className="pt-[28px] ml-[-11px]">
             {[
               "Product strategy",
               "Product management",
@@ -28,22 +29,22 @@ const Skills: React.FC = () => {
               "Creative direction",
               "Design systems",
             ].map((item) => (
-              <li key={item} className="flex items-center text-36px">
-                <img src="/icons/finger.svg" alt="Finger pointing" className="mr-2 h-4 w-6" />
-                {item}
-              </li>
+             <div className="flex my-[-4.5px]" key={item}>
+                <Image className="mr-[10px]" src="/icons/finger.svg" alt="Finger pointing" height={40} width={40}/>
+                <Typography variant="body" key={item} > {item} </Typography>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         {/* Extras */}
-        <div className="flex flex-col">
-          <Typography variant="h3" className="mb-4 text-36px">
+        <div className="flex flex-col mt-[30px] pl-[5px] lg:ml-auto lg:w-1/2">
+          <Typography variant="body" className="font-bold">
             Extras:
           </Typography>
-          <Typography variant="body" className="mb-6 text-36px">
+          <Typography variant="body1" className="font-bold">
             I know people who can
           </Typography>
-          <ul className="space-y-2">
+          <div className="pt-[28px] ">
             {[
               "Web development",
               "Mobile development",
@@ -52,15 +53,15 @@ const Skills: React.FC = () => {
               "Photo/video production",
               "Typography",
             ].map((item) => (
-              <li key={item} className="flex items-center text-36px">
-                <img src="/icons/finger.svg" alt="Finger pointing" className="mr-2 h-4 w-6" />
-                {item}
-              </li>
+              <div className="flex my-[-4.5px]" key={item}>
+                <Image className="mr-[10px]" src="/icons/finger.svg" alt="Finger pointing" height={40} width={40}/>
+                <Typography variant="body" key={item} > {item} </Typography>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

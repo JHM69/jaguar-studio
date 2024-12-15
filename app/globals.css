@@ -21,6 +21,13 @@ body {
   font-family: 'Instrument Serif', serif;
 }
 
+/* add Italic Version of  font-family from InstrumentSerif-Italic.ttf*/
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
 .font-lunchtype22 {
   font-family: 'Lunchtype22', sans-serif;
 }
@@ -97,7 +104,6 @@ body {
 }
 
 
-
 @keyframes move-gradient {
   0% {
     background-position: 0% 50%;
@@ -111,9 +117,14 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(120deg, #ff8eb4, #ffa76d, #ffffff 70%);
-  background-size: 400% 400%;
-  animation: move-gradient 10s ease infinite;
+  background: linear-gradient(120deg, 
+              #FF87B9 20%, /* Pink */
+              #FE984D 40%, /* Orange */
+              #ffffff 70%, /* White */
+              #FBDEFA 90%, /* Light Pink */
+              #FAEEE4 100%); /* Light Orange */
+  background-size: 300% 300%;
+  animation: move-gradient 8s ease infinite;
 }
 
 .cursor-dot {
