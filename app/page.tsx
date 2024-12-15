@@ -9,7 +9,7 @@ import CursorDot from './components/ui/CursorDot';
  
 export default function Home() {
   return (
-    <div className="relative min-h-screen text-black pb-[200px]">
+    <div className="relative min-h-screen text-black pb-8 md:pb-16">
       <div className="animated-gradient absolute inset-0 -z-10"></div>
       <CursorDot /> {/* Add this line */}
       <div className="cursor-dot"></div>
@@ -18,7 +18,7 @@ export default function Home() {
       <CompanyLogos />
       <MoreInfo />
       <Skills />
-      <div className='mx-[40px] mt-[193px] rounded-xl bg-white'>
+      <div className='mx-4 md:mx-10 mt-12 md:mt-20 rounded-xl bg-white'>
         <Services />
         <Footer />
       </div>

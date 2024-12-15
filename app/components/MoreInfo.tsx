@@ -6,32 +6,31 @@ import EyeIcon from '../../public/icons/eye.svg';
 
 const MoreInfo: React.FC = () => {
   return (
-    <div className="px-10 mt-24">
+    <div className="px-4 md:px-10 mt-12 md:mt-24">
       {/* Header Section */}
-      <div className="flex justify-between items-start">
-        <div className="w-[930px] pt-[34px] justify-center items-center flex flex-col">
-          <Typography
-            variant="body"
-            className=" leading-50  "
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+        <div className="w-full md:w-[930px] pt-4 md:pt-[34px] flex flex-col items-center">
+          <span
+            className="font-lunchtype22 text-[18px] md:text-[36px] lg:text-[36px] text-gray-800 text-left" 
           >
            Jaguar Studio, the independent studio of Manuela Odell, is dedicated to building digital products across web, mobile, and any other interface, using a human-centered approach and quality craft. We can be your design partner for{' '}
             <strong>product strategy</strong>, <strong>product design</strong>, and{' '}
             <strong>development</strong>.
-          </Typography>
+          </span>
         </div>
        
-          <Image className='items-center mt-[55px] ml-[40px] justify-center' src={StarsIcon} alt="Stars Icon" width={210} height={230} />
+          <Image className="mt-6 w-36 md:w-[210px] md:mt-0 md:ml-[40px]" src={StarsIcon} alt="Stars Icon" width={210} height={230} />
          
       </div>
 
       {/* Collaboration Section */}
-      <div className="justify-between items-start flex mt-[60px]">
+      <div className="flex flex-col md:flex-row justify-between items-center mt-8 md:mt-[60px]">
          
-          <Image className=' ml-[94px] mt-[115px] ' src={EyeIcon} alt="Eye Icon" width={63.4} height={81.2} />
+          <Image className="mt-6 md:mt-0 md:ml-[94px]" src={EyeIcon} alt="Eye Icon" width={63.4} height={81.2} />
   
-        <Typography
-          variant="body"
-          className=" text-right w-[890px] leading-50 mr-[-20px] "
+        <span
+          className="font-lunchtype22 text-[18px] md:text-[36px] lg:text-[36px] text-gray-800 md:ml-16 text-right"
+          
         >
           With a deep understanding of <strong>design</strong>, <strong>culture</strong>, and{' '}
           <strong>technology</strong>, we transform ideas into powerful visual
@@ -39,7 +38,7 @@ const MoreInfo: React.FC = () => {
           <strong>thrive</strong> in a competitive landscape. Let’s collaborate
           to create <strong>something exceptional</strong>.<br /><br />
           Open for freelance, permalance, and full-time opportunities.
-        </Typography>
+        </span>
       </div>
 
       

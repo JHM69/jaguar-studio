@@ -1,18 +1,16 @@
-
 import React from 'react';
 
 interface LinkProps {
   href: string;
   label: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const Link: React.FC<LinkProps> = ({ href, label, className }) => {
-  return (
-    <a href={href} className={className+" text-gray-900 font-lunchtype22 font-bold hover:underline"}>
-      {label}
-    </a>
-  );
-};
+const Link: React.FC<LinkProps> = ({ href, label, className="", onClick }) => (
+  <a href={href} className={`block py-2 px-4 text-base md:text-lg ${className}`}>
+    {label}
+  </a>
+);
 
 export default Link;
