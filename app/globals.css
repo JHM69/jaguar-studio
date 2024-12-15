@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400&display=swap');
+
+@font-face {
+  font-family: 'Lunchtype22';
+  src: url('/fonts/Lunchtype22-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
+  cursor: none;
+}
+
+.font-instrument-serif {
+  font-family: 'Instrument Serif', serif;
+}
+
+.font-lunchtype22 {
+  font-family: 'Lunchtype22', sans-serif;
 }
 
 @layer utilities {
@@ -76,3 +95,44 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+@keyframes move-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(120deg, #ff8eb4, #ffa76d, #ffffff 70%);
+  background-size: 400% 400%;
+  animation: move-gradient 10s ease infinite;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+}
+
+button:hover ~ .cursor-dot,
+.interactive:hover ~ .cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
