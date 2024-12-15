@@ -1,6 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-import Typography from './ui/Typography';
+import Image from 'next/image'; 
 import StarsIcon from '../../public/icons/stars.svg';
 import EyeIcon from '../../public/icons/eye.svg';
 
